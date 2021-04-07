@@ -1,0 +1,32 @@
+{
+	"name": "gitman",
+	"version": "1.0.0",
+	"description": "Automate git workflows in Node.js",
+	"main": "index.js",
+	"scripts": {
+		"start": "node -r dotenv/config dist/index.js",
+		"build": "tsc --outDir dist/ *.ts && node -r dotenv/config dist/setup.js",
+		"test": "ts-node trigger.ts",
+		"clean": "rm -rf repo/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Firebird1029/gitman.git"
+	},
+	"author": "Brandon Yee",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Firebird1029/gitman/issues"
+	},
+	"homepage": "https://github.com/Firebird1029/gitman#readme",
+	"dependencies": {
+		"nodegit": "^0.27.0"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.37",
+		"@types/nodegit": "^0.26.15",
+		"dotenv": "^8.2.0",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.3"
+	}
+}
