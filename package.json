@@ -5,9 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node -r dotenv/config dist/index.js",
-		"build": "tsc --outDir dist/ *.ts && node -r dotenv/config dist/setup.js",
-		"test": "ts-node trigger.ts",
-		"clean": "rm -rf repo/"
+		"build": "tsc --outDir dist/ src/*.ts && node -r dotenv/config dist/setup.js",
+		"test": "ts-node -r dotenv/config src/trigger.ts",
+		"clean": "rm -rf repo/ dist/"
 	},
 	"repository": {
 		"type": "git",
