@@ -4,8 +4,8 @@
 	"description": "Automate git workflows in Node.js",
 	"main": "index.js",
 	"scripts": {
-		"start": "node -r dotenv/config dist/index.js",
-		"build": "tsc --outDir dist/ src/*.ts && node -r dotenv/config dist/setup.js",
+		"start": "node dist/index.js",
+		"build": "tsc --outDir dist/ src/*.ts && node dist/setup.js",
 		"test": "ts-node -r dotenv/config src/trigger.ts",
 		"clean": "rm -rf repo/ dist/"
 	},

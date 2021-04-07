@@ -22,8 +22,8 @@ async function runWorkflow() {
 	await remote.push(["refs/heads/master:refs/heads/master"], {
 		callbacks: {
 			certificateCheck: () => 0,
-			credentials: (url, username: string) => {
-				return Cred.sshKeyFromAgent(username);
+			credentials: () => {
+				return Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, "x-oauth-basic");
 			},
 		},
 	});
