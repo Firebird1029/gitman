@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node dist/index.js",
-		"build": "tsc --outDir dist/ src/*.ts && node dist/setup.js",
-		"build:test": "tsc --outDir dist/ src/*.ts && node -r dotenv/config dist/setup.js",
+		"build": "npm run clean && tsc --outDir dist/ src/*.ts && node dist/setup.js",
+		"build:local": "npm run clean && tsc --outDir dist/ src/*.ts && node -r dotenv/config dist/setup.js",
 		"test": "ts-node -r dotenv/config src/trigger.ts",
 		"clean": "rm -rf repo/ dist/"
 	},
@@ -31,5 +31,8 @@
 		"dotenv": "^8.2.0",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.2.3"
+	},
+	"engines": {
+		"node": ">=15.0.0"
 	}
 }
