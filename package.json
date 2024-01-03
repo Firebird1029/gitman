@@ -7,6 +7,7 @@
 		"start": "node dist/index.js",
 		"build": "npm run clean && tsc --outDir dist/ src/*.ts && node dist/setup.js",
 		"build:local": "npm run clean && tsc --outDir dist/ src/*.ts && node -r dotenv/config dist/setup.js",
+		"test-setup": "ts-node -r dotenv/config src/setup.ts",
 		"test": "ts-node -r dotenv/config src/trigger.ts",
 		"clean": "rm -rf repo/ dist/"
 	},
@@ -21,18 +22,18 @@
 	},
 	"homepage": "https://github.com/Firebird1029/gitman#readme",
 	"dependencies": {
-		"node-cron": "^3.0.0",
-		"nodegit": "^0.27.0"
+		"node-cron": "^3.0.3",
+		"@figma/nodegit": "0.28.0-figma.4"
 	},
 	"devDependencies": {
-		"@types/node": "^14.14.37",
-		"@types/node-cron": "^2.0.3",
-		"@types/nodegit": "^0.26.15",
-		"dotenv": "^8.2.0",
-		"ts-node": "^9.1.1",
-		"typescript": "^4.2.3"
+		"@types/node": "^20.10.6",
+		"@types/node-cron": "^3.0.11",
+		"@types/nodegit": "^0.28.7",
+		"dotenv": "^16.3.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
 	},
 	"engines": {
-		"node": "^15.0.0"
+		"node": "^16"
 	}
 }

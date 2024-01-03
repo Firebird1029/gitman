@@ -1,0 +1,8 @@
+// https://stackoverflow.com/questions/64785096/how-to-use-definitelytyped-types-on-forked-packages
+{
+	"compilerOptions": {
+		"paths": {
+			"@figma/nodegit": ["./node_modules/@types/nodegit"]
+		}
+	}
+}
